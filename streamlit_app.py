@@ -89,5 +89,8 @@ df_graph = pd.DataFrame()
 df_graph['Yearly_Expenses'] = Yearly_Expenses
 df_graph['Yearly_Withdrawal_Amount'] = Yearly_Withdrawal_Amount
 
+st.write(df[df.Yearly_Expenses <= df.Yearly_Withdrawal_Amount].head(1))
+
+
 st.dataframe(df)
 st.line_chart(df_graph)
