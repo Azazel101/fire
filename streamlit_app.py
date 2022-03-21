@@ -21,3 +21,21 @@ saving_rate = st.slider(
     value=0.5,
     help="You can choose the number of keywords/keyphrases to display. Between 0 and 1, default number is 0.5.",
 )
+
+income = st.slider(
+    "# of results",
+    min_value=100,
+    max_value=50000,
+    step=10,
+    value=1000,
+    help="You can choose the number of keywords/keyphrases to display. Between 0 and 1, default number is 0.5.",
+)
+
+interest_rate = st.slider(
+    "# of results",
+    min_value=0.0,
+    max_value=1.0,
+    step=0.01,
+    value=0.5,
+    help="You can choose the number of keywords/keyphrases to display. Between 0 and 1, default number is 0.5.",
+)
