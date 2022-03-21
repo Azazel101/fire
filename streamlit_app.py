@@ -39,7 +39,7 @@ interest_rate_raw = st.slider(
     min_value=0.0,
     max_value=100.0,
     step=0.1,
-    value=8,
+    value=8.0,
     help="You can choose the number to display. Between 0 and 1, default number is 0.5.",
 )
 
