@@ -14,7 +14,7 @@ Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
 st.write("Toto je test.")
 
 saving_rate = st.slider(
-    "# of results",
+    "saving rate",
     min_value=0.0,
     max_value=1.0,
     step=0.01,
@@ -23,7 +23,7 @@ saving_rate = st.slider(
 )
 
 income = st.slider(
-    "# of results",
+    "income",
     min_value=100,
     max_value=50000,
     step=10,
@@ -32,10 +32,10 @@ income = st.slider(
 )
 
 interest_rate = st.slider(
-    "# of results",
+    "interest rate",
     min_value=0.0,
     max_value=1.0,
     step=0.01,
     value=0.5,
-    help="You can choose the number of keywords/keyphrases to display. Between 0 and 1, default number is 0.5.",
+    help="You can choose the number to display. Between 0 and 1, default number is 0.5.",
 )
