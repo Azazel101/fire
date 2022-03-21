@@ -29,7 +29,7 @@ saving_rate = st.slider(
 
 income = st.slider(
     "Yearly Income",
-    min_value=100,
+    min_value=5000,
     max_value=50000,
     step=10,
     value=18000,
@@ -87,5 +87,9 @@ df['Annual_Returns'] = Annual_Returns
 Yearly_Withdrawal_Amount = np.array(Total_Invested_Amount) * withdrawal_rate
 df['Yearly_Withdrawal_Amount'] = Yearly_Withdrawal_Amount
 
+df_graph = pd.DataFrame()
+df_graph['Yearly_Expenses'] = Yearly_Expenses
+df_graph['Yearly_Withdrawal_Amount'] = Yearly_Withdrawal_Amount
+
 st.dataframe(df)
-st.line_chart(df)
+st.line_chart(df_graph)
