@@ -86,6 +86,7 @@ df['Total_Invested_Amount'] = Total_Invested_Amount
 df['Annual_Returns'] = Annual_Returns
 Yearly_Withdrawal_Amount = np.array(Total_Invested_Amount) * withdrawal_rate
 df['Yearly_Withdrawal_Amount'] = Yearly_Withdrawal_Amount
+df.set_index('Year')
 
 df_graph = pd.DataFrame()
 df_graph['Yearly_Expenses'] = Yearly_Expenses
