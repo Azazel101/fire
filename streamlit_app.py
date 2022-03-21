@@ -4,7 +4,8 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
-
+import numpy as np
+import pandas as pd
 """
 # Welcome to Streamlit!
 
@@ -37,7 +38,7 @@ interest_rate = st.slider(
     min_value=0.0,
     max_value=1.0,
     step=0.01,
-    value=0.5,
+    value=0.08,
     help="You can choose the number to display. Between 0 and 1, default number is 0.5.",
 )
 
@@ -62,6 +63,7 @@ Total_Invested_Amount.append(investment)
 Annual_Returns.append(annual_return)
 
 invested_years = 30
+
 for i in range(0, invested_years -1):
     investment = (income - expenses) + annual_return + investment
     annual_return = investment * interest_rate
@@ -72,4 +74,14 @@ for i in range(0, invested_years -1):
     Total_Invested_Amount.append(investment)
     Annual_Returns.append(annual_return)
 
-st.text(annual_return)
+df = pd.DataFrame()
+df['Year'] = Year
+df['Yearly_Income'] = Yearly_Income
+df['Yearly_Expenses'] = Yearly_Expenses
+df['Yearly_Invested_Amount'] = Yearly_Invested_Amount
+df['Total_Invested_Amount'] = Total_Invested_Amount
+df['Annual_Returns'] = Annual_Returns
+Yearly_Withdrawal_Amount = np.array(Total_Invested_Amount) * withdrawal_rate
+df['Yearly_Withdrawal_Amount'] = Yearly_Withdrawal_Amount
+
+st.dataframe(df)
