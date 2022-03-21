@@ -1,4 +1,5 @@
 from collections import namedtuple
+from winreg import ExpandEnvironmentStrings
 import altair as alt
 import math
 import pandas as pd
@@ -39,3 +40,16 @@ interest_rate = st.slider(
     value=0.5,
     help="You can choose the number to display. Between 0 and 1, default number is 0.5.",
 )
+
+expenses = income * (1-saving_rate)
+investment = income - expenses
+annual_return = investment * interest_rate
+year = 2022
+withdrawal_rate = 0.04
+
+Year = []
+Yearly_Income = []
+Yearly_Expenses = []
+Yearly_Invested_Amount = []
+Total_Invested_Amount = []
+Annual_Returns = []
