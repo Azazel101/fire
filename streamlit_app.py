@@ -91,6 +91,8 @@ df.set_index('Year')
 df_graph = pd.DataFrame()
 df_graph['Yearly_Expenses'] = Yearly_Expenses
 df_graph['Yearly_Withdrawal_Amount'] = Yearly_Withdrawal_Amount
+df_graph['Year'] = Year
+df_graph.set_index('Year')
 
 st.write(df[df.Yearly_Expenses <= df.Yearly_Withdrawal_Amount].head(1))
 
