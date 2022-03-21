@@ -14,7 +14,7 @@ from datetime import datetime
 
 """
 
-st.write("Toto je test.")
+#st.write("Toto je test.")
 
 saving_rate = st.slider(
     "Saving rate",
