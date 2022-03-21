@@ -34,14 +34,16 @@ income = st.slider(
     help="You can choose the number of keywords/keyphrases to display. Between 100 and 50000, default number is 10.",
 )
 
-interest_rate = st.slider(
+interest_rate_raw = st.slider(
     "interest rate",
     min_value=0.0,
-    max_value=1.0,
-    step=0.01,
-    value=0.08,
+    max_value=100.0,
+    step=0.1,
+    value=8,
     help="You can choose the number to display. Between 0 and 1, default number is 0.5.",
 )
+
+interest_rate = interest_rate_raw / 100
 
 expenses = income * (1-saving_rate)
 investment = income - expenses
