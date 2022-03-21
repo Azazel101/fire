@@ -6,6 +6,9 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import pandas as pd
+from datetime import datetime
+
+
 """
 # Welcome to Streamlit!
 
@@ -16,7 +19,7 @@ Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
 st.write("Toto je test.")
 
 saving_rate = st.slider(
-    "saving rate",
+    "Saving rate",
     min_value=0.0,
     max_value=1.0,
     step=0.01,
@@ -25,11 +28,11 @@ saving_rate = st.slider(
 )
 
 income = st.slider(
-    "income",
+    "Yearly Income",
     min_value=100,
     max_value=50000,
     step=10,
-    value=1000,
+    value=18000,
     help="You can choose the number of keywords/keyphrases to display. Between 100 and 50000, default number is 10.",
 )
 
@@ -45,7 +48,7 @@ interest_rate = st.slider(
 expenses = income * (1-saving_rate)
 investment = income - expenses
 annual_return = investment * interest_rate
-year = 2022
+year = datetime.now().year
 withdrawal_rate = 0.04
 
 Year = []
@@ -85,3 +88,4 @@ Yearly_Withdrawal_Amount = np.array(Total_Invested_Amount) * withdrawal_rate
 df['Yearly_Withdrawal_Amount'] = Yearly_Withdrawal_Amount
 
 st.dataframe(df)
+st.line_chart(df)
