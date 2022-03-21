@@ -53,3 +53,23 @@ Yearly_Expenses = []
 Yearly_Invested_Amount = []
 Total_Invested_Amount = []
 Annual_Returns = []
+
+Year.append(year)
+Yearly_Income.append(income)
+Yearly_Expenses.append(expenses)
+Yearly_Invested_Amount.append(income - expenses)
+Total_Invested_Amount.append(investment)
+Annual_Returns.append(annual_return)
+
+invested_years = 30
+for i in range(0, invested_years -1):
+    investment = (income - expenses) + annual_return + investment
+    annual_return = investment * interest_rate
+    Year.append(year + i + 1)
+    Yearly_Income.append(income)
+    Yearly_Expenses.append(expenses)
+    Yearly_Invested_Amount.append(income - expenses)
+    Total_Invested_Amount.append(investment)
+    Annual_Returns.append(annual_return)
+
+st.text(annual_return)
