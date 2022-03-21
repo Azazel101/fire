@@ -17,7 +17,7 @@ saving_rate = st.slider(
     "# of results",
     min_value=0,
     max_value=1,
-    step=0.01,
+#    step=0.01,
     value=0.5,
     help="You can choose the number of keywords/keyphrases to display. Between 0 and 1, default number is 0.5.",
 )
