@@ -28,7 +28,7 @@ income = st.slider(
     max_value=50000,
     step=10,
     value=1000,
-    help="You can choose the number of keywords/keyphrases to display. Between 0 and 1, default number is 0.5.",
+    help="You can choose the number of keywords/keyphrases to display. Between 100 and 50000, default number is 10.",
 )
 
 interest_rate = st.slider(
