@@ -13,7 +13,7 @@ from datetime import datetime
 
 #st.write("Toto je test.")
 
-saving_rate = st.slider(
+saving_rate = st.sidebar.slider(
     "Saving rate",
     min_value=0.0,
     max_value=1.0,
@@ -22,7 +22,7 @@ saving_rate = st.slider(
     help="You can choose the number of keywords/keyphrases to display. Between 0 and 1, default number is 0.5.",
 )
 
-income = st.slider(
+income = st.sidebar.slider(
     "Yearly Income",
     min_value=5000,
     max_value=50000,
@@ -31,7 +31,7 @@ income = st.slider(
     help="You can choose the number of keywords/keyphrases to display. Between 100 and 50000, default number is 10.",
 )
 
-interest_rate_raw = st.slider(
+interest_rate_raw = st.sidebar.slider(
     "interest rate",
     min_value=0.0,
     max_value=100.0,
