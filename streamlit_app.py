@@ -101,7 +101,18 @@ st.line_chart(df_graph)
 st.write("Calculate the income amount wanted given som average yearly interest rate and your current principle.")
 st.write("Vypočítajte si požadovanú výšku príjmu vzhľadom na priemernú ročnú úrokovú sadzbu a váš aktuálny princíp.")
 
+principle = st.number_input("What is your principle amount?")
+interest_rate_raw_1 = st.slider(
+    "interest rate",
+    min_value=0.0,
+    max_value=100.0,
+    step=0.1,
+    value=8.0,
+    help="You can choose the number to display. Between 0 and 1, default number is 0.5.",
+)
 
+amount = principle * (interest_rate_raw_1 / 100)
+st.write("You would make on average:", amount, "per year")
 
 st.write("Calculate the principle you need given some average yearly interest rate to make x income")
 st.write("Vypočítajte si princíp, ktorý potrebujete vzhľadom na nejakú priemernú ročnú úrokovú sadzbu, aby ste dosiahli x výšku príjmu za rok.")
