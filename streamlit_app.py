@@ -117,7 +117,18 @@ st.write("You would make on average:", amount, "per year")
 st.write("Calculate the principle you need given some average yearly interest rate to make x income")
 st.write("Vypočítajte si princíp, ktorý potrebujete vzhľadom na nejakú priemernú ročnú úrokovú sadzbu, aby ste dosiahli x výšku príjmu za rok.")
 
+interest_rate_raw_2 = st.number_input("What is your averagte yearly interest rate percentage (%)?")
+amount_1 = st.number_input("What is the amount per year that you want to make from that interest rate ?")
 
+principle = amount_1 / ((interest_rate_raw_2) / 100)
+st.write("You would need a princle of about", principle, "to have an annual income of", amount_1,"% interest yearly from your principle.")
 
 st.write("Calculate the average yearly interest rate you need given some principle amount to make x income amount per year.")
 st.write("Vypočítajte priemernú ročnú úrokovú sadzbu, ktorú potrebujete vzhľadom na nejakú zásadnú sumu, aby ste dosiahli x výšku príjmu za rok.")
+
+principle_1 = st.number_input("What is your principle amount?")
+amount_2 = st.number_input("What is the amount per year that you want to make from that interest rate ?")
+
+interest_rate = amount_2 / principle_1 * 100
+
+st.write("You would need to find an asset or investment that gives an average of", interest_rate, "% interest per year.")
