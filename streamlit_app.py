@@ -1,7 +1,4 @@
 from collections import namedtuple
-#from winreg import ExpandEnvironmentStrings
-import altair as alt
-import math
 import pandas as pd
 import streamlit as st
 import numpy as np
