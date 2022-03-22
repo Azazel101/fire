@@ -96,7 +96,7 @@ st.write(df[df.Yearly_Expenses <= df.Yearly_Withdrawal_Amount].head(1))
 
 
 st.dataframe(df)
-st.line_chart(df_graph)
+st.area_chart(df_graph)
 
 st.header("1. Calculate the income amount wanted given som average yearly interest rate and your current principle.")
 st.subheader("1. Vypočítajte si požadovanú výšku príjmu vzhľadom na priemernú ročnú úrokovú sadzbu a váš aktuálny princíp.")
