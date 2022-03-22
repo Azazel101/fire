@@ -103,7 +103,7 @@ st.write("Vypočítajte si požadovanú výšku príjmu vzhľadom na priemernú 
 
 principle = st.number_input("What is your principle amount?")
 interest_rate_raw_1 = st.slider(
-    "interest rate",
+    "interest rate 1",
     min_value=0.0,
     max_value=100.0,
     step=0.1,
