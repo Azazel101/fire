@@ -118,7 +118,7 @@ interest_rate_raw_2 = st.sidebar.number_input("2. What is your averagte yearly i
 amount_1 = st.sidebar.number_input("2. What is the amount per year that you want to make from that interest rate ?",value=10000)
 
 principle = amount_1 / ((interest_rate_raw_2) / 100)
-st.write("2. You would need a princle of about", principle, "to have an annual income of", amount_1," interest yearly from your principle.")
+st.write("2. You would need a princle of about", principle, "to have an annual income of", amount_1," interest yearly or ", amount_1 / 12 ," monthly from your principle.")
 
 st.header("3. Calculate the average yearly interest rate you need given some principle amount to make x income amount per year.")
 st.subheader("3. Vypočítajte priemernú ročnú úrokovú sadzbu, ktorú potrebujete vzhľadom na nejakú zásadnú sumu, aby ste dosiahli x výšku príjmu za rok.")
