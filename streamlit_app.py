@@ -109,7 +109,8 @@ interest_rate_raw_1 = st.sidebar.slider(
 )
 
 amount = principle * (interest_rate_raw_1 / 100)
-st.subheader("1. You would make on average:", amount, "per year or ", round(amount / 12,1) ,"per mount.")
+month = round(amount / 12,1)
+st.subheader("1. You would make on average:", amount, "per year or ", month ,"per mount.")
 
 st.subheader("2. Calculate the principle you need given some average yearly interest rate to make x income")
 st.write("2. Vypočítajte si princíp, ktorý potrebujete vzhľadom na nejakú priemernú ročnú úrokovú sadzbu, aby ste dosiahli x výšku príjmu za rok.")
