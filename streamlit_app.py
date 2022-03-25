@@ -95,8 +95,8 @@ st.write(df[df.Yearly_Expenses <= df.Yearly_Withdrawal_Amount].head(1))
 st.dataframe(df)
 st.area_chart(df_graph)
 
-st.header("1. Calculate the income amount wanted given som average yearly interest rate and your current principle.")
-st.subheader("1. Vypočítajte si požadovanú výšku príjmu vzhľadom na priemernú ročnú úrokovú sadzbu a váš aktuálny princíp.")
+st.subheader("1. Calculate the income amount wanted given som average yearly interest rate and your current principle.")
+st.write("1. Vypočítajte si požadovanú výšku príjmu vzhľadom na priemernú ročnú úrokovú sadzbu a váš aktuálny princíp.")
 
 principle = st.sidebar.number_input("1. What is your principle amount?",value=15000)
 interest_rate_raw_1 = st.sidebar.slider(
@@ -109,23 +109,23 @@ interest_rate_raw_1 = st.sidebar.slider(
 )
 
 amount = principle * (interest_rate_raw_1 / 100)
-st.write("1. You would make on average:", amount, "per year or ", amount / 12 ,"per mount.")
+st.subheader("1. You would make on average:", amount, "per year or ", round(amount / 12,1) ,"per mount.")
 
-st.header("2. Calculate the principle you need given some average yearly interest rate to make x income")
-st.subheader("2. Vypočítajte si princíp, ktorý potrebujete vzhľadom na nejakú priemernú ročnú úrokovú sadzbu, aby ste dosiahli x výšku príjmu za rok.")
+st.subheader("2. Calculate the principle you need given some average yearly interest rate to make x income")
+st.write("2. Vypočítajte si princíp, ktorý potrebujete vzhľadom na nejakú priemernú ročnú úrokovú sadzbu, aby ste dosiahli x výšku príjmu za rok.")
 
 interest_rate_raw_2 = st.sidebar.number_input("2. What is your averagte yearly interest rate percentage (%)?",value=4.0, step=0.1)
 amount_1 = st.sidebar.number_input("2. What is the amount per year that you want to make from that interest rate ?",value=10000)
 
 principle = amount_1 / ((interest_rate_raw_2) / 100)
-st.write("2. You would need a princle of about", principle, "to have an annual income of", amount_1," interest yearly or ", amount_1 / 12 ," monthly from your principle.")
+st.subheader("2. You would need a princle of about", principle, "to have an annual income of", amount_1," interest yearly or ", round(amount_1 / 12,1) ," monthly from your principle.")
 
-st.header("3. Calculate the average yearly interest rate you need given some principle amount to make x income amount per year.")
-st.subheader("3. Vypočítajte priemernú ročnú úrokovú sadzbu, ktorú potrebujete vzhľadom na nejakú zásadnú sumu, aby ste dosiahli x výšku príjmu za rok.")
+st.subheader("3. Calculate the average yearly interest rate you need given some principle amount to make x income amount per year.")
+st.write("3. Vypočítajte priemernú ročnú úrokovú sadzbu, ktorú potrebujete vzhľadom na nejakú zásadnú sumu, aby ste dosiahli x výšku príjmu za rok.")
 
 principle_1 = st.sidebar.number_input("3. What is your principle amount?",value=10000)
 amount_2 = st.sidebar.number_input("3. What is the amount per year that you want to make from that interest rate ?",value=10000)
 
 interest_rate = amount_2 / principle_1 * 100
 
-st.write("3. You would need to find an asset or investment that gives an average of", interest_rate, "% interest per year.")
+st.subheader("3. You would need to find an asset or investment that gives an average of", interest_rate, "% interest per year.")
