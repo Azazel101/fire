@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 """
-# FIRE (Financial Independence, Retire Early)
+# 🔥 FIRE (Financial Independence, Retire Early)
 
 """
 
