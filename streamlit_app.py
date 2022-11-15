@@ -5,6 +5,11 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 
+st.set_page_config(
+    page_title="FIRE (Financial Independence, Retire Early)",
+    layout="wide",
+    page_icon="🔥",
+)
 
 """
 # FIRE (Financial Independence, Retire Early)
